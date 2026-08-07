@@ -1,0 +1,6 @@
+{
+  "name": "Léo Andaimes - Aluguel, Montagem e Desmontagem",
+  "description": "Landing page profissional da Léo Andaimes, especializada em locação, montagem e desmontagem de andaimes para obras e construção civil.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

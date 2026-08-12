@@ -1,10 +1,3 @@
-/**
- * ==========================================================================
- * LÉO ANDAIMES - LÓGICA E INTERAÇÕES (script.js)
- * JavaScript puro (Vanilla JS) para a landing page institucional
- * ==========================================================================
- */
-
 document.addEventListener('DOMContentLoaded', () => {
   // Inicialização de módulos
   initHeader();

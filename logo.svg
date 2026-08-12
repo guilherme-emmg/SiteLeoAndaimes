@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" width="100%" height="100%">
+  <!-- Scaffold Tower Graphic (Left) -->
+  <g id="scaffold-icon">
+    <!-- Platform Deck (Middle filled plank) -->
+    <polygon points="12,78 148,78 140,96 20,96" fill="#E2C99B" />
+
+    <!-- Back Left Leg -->
+    <line x1="20" y1="12" x2="20" y2="168" stroke="#E2C99B" stroke-width="5" stroke-linecap="round" />
+    <circle cx="20" cy="10" r="3" fill="#E2C99B" />
+    <circle cx="20" cy="170" r="3" fill="#E2C99B" />
+
+    <!-- Back Center Leg -->
+    <line x1="58" y1="12" x2="58" y2="168" stroke="#E2C99B" stroke-width="5" stroke-linecap="round" />
+    <circle cx="58" cy="10" r="3" fill="#E2C99B" />
+    <circle cx="58" cy="170" r="3" fill="#E2C99B" />
+
+    <!-- Back Right Leg -->
+    <line x1="96" y1="12" x2="96" y2="168" stroke="#E2C99B" stroke-width="5" stroke-linecap="round" />
+    <circle cx="96" cy="10" r="3" fill="#E2C99B" />
+    <circle cx="96" cy="170" r="3" fill="#E2C99B" />
+
+    <!-- Front Right Outer Leg -->
+    <line x1="140" y1="12" x2="140" y2="152" stroke="#E2C99B" stroke-width="5" stroke-linecap="round" />
+    <circle cx="140" cy="10" r="3" fill="#E2C99B" />
+    <circle cx="140" cy="154" r="3" fill="#E2C99B" />
+
+    <!-- Horizontal Rungs Top -->
+    <line x1="12" y1="20" x2="144" y2="20" stroke="#E2C99B" stroke-width="5" stroke-linecap="round" />
+    <!-- Horizontal Rungs Upper Mid -->
+    <line x1="12" y1="56" x2="144" y2="56" stroke="#E2C99B" stroke-width="4" stroke-linecap="round" />
+    <!-- Horizontal Rungs Lower Mid -->
+    <line x1="12" y1="110" x2="144" y2="110" stroke="#E2C99B" stroke-width="4" stroke-linecap="round" />
+    <!-- Horizontal Rungs Bottom -->
+    <line x1="12" y1="138" x2="144" y2="138" stroke="#E2C99B" stroke-width="5" stroke-linecap="round" />
+
+    <!-- Vertical dividers in top section -->
+    <line x1="38" y1="20" x2="38" y2="56" stroke="#E2C99B" stroke-width="3" />
+    <line x1="77" y1="20" x2="77" y2="56" stroke="#E2C99B" stroke-width="3" />
+    <line x1="118" y1="20" x2="118" y2="56" stroke="#E2C99B" stroke-width="3" />
+
+    <!-- Vertical dividers in bottom section -->
+    <line x1="38" y1="110" x2="38" y2="138" stroke="#E2C99B" stroke-width="3" />
+    <line x1="77" y1="110" x2="77" y2="138" stroke="#E2C99B" stroke-width="3" />
+    <line x1="118" y1="110" x2="118" y2="138" stroke="#E2C99B" stroke-width="3" />
+
+    <!-- Front Perspective Cross Members -->
+    <line x1="20" y1="96" x2="140" y2="138" stroke="#E2C99B" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="20" y1="138" x2="70" y2="120" stroke="#E2C99B" stroke-width="4" stroke-linecap="round" />
+  </g>
+
+  <!-- Right Text Group -->
+  <g id="brand-text">
+    <!-- LÉO Main Text -->
+    <!-- Letter L -->
+    <path d="M 180,20 L 208,20 L 208,98 L 254,98 L 254,122 L 180,122 Z" fill="#1D3A5D" />
+
+    <!-- Crown motif above E -->
+    <path d="M 272,18 L 348,18 L 348,46 L 310,28 L 272,46 Z" fill="#E2C99B" />
+    <polygon points="272,18 348,18 328,32 310,22 292,32" fill="#E2C99B" />
+
+    <!-- Letter É -->
+    <path d="M 272,48 L 348,48 L 348,70 L 298,70 L 298,78 L 344,78 L 344,98 L 298,98 L 298,102 L 348,102 L 348,122 L 272,122 Z" fill="#1D3A5D" />
+
+    <!-- Letter O -->
+    <path d="M 406,19 C 374,19 354,41 354,71 C 354,101 374,123 406,123 C 438,123 458,101 458,71 C 458,41 438,19 406,19 Z M 406,43 C 420,43 430,54 430,71 C 430,88 420,99 406,99 C 392,99 382,88 382,71 C 382,54 392,43 406,43 Z" fill="#1D3A5D" />
+
+    <!-- Subtitle: ANDAIMES -->
+    <text x="195" y="158" font-family="'Montserrat', 'Plus Jakarta Sans', sans-serif" font-size="25" font-weight="500" fill="#6C7A89" letter-spacing="18">ANDAIMES</text>
+  </g>
+</svg>

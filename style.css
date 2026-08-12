@@ -1,18 +1,10 @@
-/* ==========================================================================
-   LÉO ANDAIMES - ESTILOS PRINCIPAIS (style.css)
-   Identidade Visual: Azul Royal (#0B2545), Dourado (#D4AF37) e Branco (#FFFFFF)
-   Arquitetura CSS3 pura sem uso de frameworks externos
-   ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1. VARIÁVEIS DE DESIGN & TEMA
-   -------------------------------------------------------------------------- */
 :root {
-  /* Cores Principais - Azul Royal / Marinho */
-  --color-primary: #0B2545;
-  --color-primary-light: #13315C;
-  --color-primary-dark: #061528;
-  --color-primary-soft: rgba(11, 37, 69, 0.05);
+  /* Cores Principais - Azul Royal / Marinho (#002B5B) */
+  --color-primary: #002B5B;
+  --color-primary-light: #003D80;
+  --color-primary-dark: #001C3D;
+  --color-primary-soft: rgba(0, 43, 91, 0.05);
 
   /* Cores de Destaque - Dourado */
   --color-gold: #D4AF37;
@@ -59,9 +51,6 @@
   --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --------------------------------------------------------------------------
-   2. RESET & BÁSICO
-   -------------------------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -190,9 +179,6 @@ ul, ol {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* --------------------------------------------------------------------------
-   3. BOTÕES & COMPONENTES REUTILIZÁVEIS
-   -------------------------------------------------------------------------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -212,16 +198,17 @@ ul, ol {
 }
 
 .btn-primary {
-  background: var(--gradient-gold);
+  background-color: var(--color-gold);
   color: var(--color-primary-dark);
-  border: 1px solid var(--color-gold-light);
-  box-shadow: var(--shadow-gold);
+  border: 1px solid var(--color-gold-dark);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
+  background-color: var(--color-gold-dark);
+  color: var(--color-text-white);
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
-  filter: brightness(1.05);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-secondary {
@@ -250,14 +237,14 @@ ul, ol {
 
 .btn-outline-gold {
   background-color: transparent;
-  color: var(--color-gold-light);
+  color: var(--color-gold);
   border: 2px solid var(--color-gold);
 }
 
 .btn-outline-gold:hover {
-  background: var(--gradient-gold);
+  background-color: var(--color-gold);
   color: var(--color-primary-dark);
-  border-color: var(--color-gold-light);
+  border-color: var(--color-gold);
 }
 
 /* --------------------------------------------------------------------------
@@ -296,6 +283,26 @@ ul, ol {
   align-items: center;
   gap: 12px;
   text-decoration: none;
+}
+
+.brand-logo-img {
+  height: 50px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+}
+
+.brand-logo-img:hover {
+  transform: scale(1.02);
+}
+
+.brand-logo-img-footer {
+  height: 52px;
+  width: auto;
+  max-width: 230px;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
 }
 
 .logo-icon {
@@ -1175,78 +1182,132 @@ ul, ol {
 }
 
 /* --------------------------------------------------------------------------
-   12. SEÇÃO DE CONTATO & FORMULÁRIO
+   12. SEÇÃO DE CONTATO DIRETO (WHATSAPP & E-MAIL)
    -------------------------------------------------------------------------- */
-.contact-grid {
+.direct-contact-container {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 48px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 920px;
+  margin: 0 auto 40px auto;
+  align-items: stretch;
 }
 
-.contact-info-card {
-  background-color: var(--color-primary);
-  color: var(--color-text-white);
-  padding: 40px;
+.direct-contact-card {
+  background-color: var(--color-card);
   border-radius: var(--radius-lg);
-  border-left: 6px solid var(--color-gold);
-  box-shadow: var(--shadow-lg);
-  height: 100%;
-}
-
-.contact-info-title {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 24px;
-
-}
-
-.contact-list {
+  padding: 44px 36px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
 }
 
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
+.direct-contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-gold);
 }
 
-.contact-item-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-sm);
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--color-gold-light);
+.direct-card-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.direct-card-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 24px;
   flex-shrink: 0;
+}
+
+.whatsapp-bg {
+  background-color: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+}
+
+.email-bg {
+  background-color: var(--color-primary);
+  color: var(--color-gold);
+  box-shadow: 0 8px 24px rgba(11, 37, 69, 0.3);
   border: 1px solid var(--color-border-gold);
 }
 
-.contact-item-label {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 2px;
+.direct-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 12px;
 }
 
-.contact-item-value {
-  font-size: 1rem;
-  font-weight: 600;
+.direct-card-desc {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
   color: #FFFFFF;
+  border: 1px solid #1EBE5A;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
 }
 
-/* Formulário */
-.contact-form-wrapper {
-  background-color: var(--color-card);
-  padding: 40px;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
+.btn-whatsapp:hover {
+  background-color: #1EBE5A;
+  color: #FFFFFF;
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+.hours-banner {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-radius: var(--radius-md);
+  padding: 24px 36px;
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+  border-left: 5px solid var(--color-gold);
+  box-shadow: var(--shadow-sm);
+}
+
+.hours-banner-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.hours-banner-item strong {
+  color: var(--color-gold);
 }
 
 .form-group {
@@ -1452,12 +1513,13 @@ ul, ol {
   width: 48px;
   height: 48px;
   border-radius: var(--radius-full);
-  background: var(--gradient-gold);
+  background-color: var(--color-gold);
   color: var(--color-primary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow-gold);
+  border: 1px solid var(--color-gold-dark);
+  box-shadow: var(--shadow-md);
   z-index: 900;
   opacity: 0;
   pointer-events: none;
@@ -1470,8 +1532,10 @@ ul, ol {
 }
 
 .back-to-top:hover {
+  background-color: var(--color-gold-dark);
+  color: var(--color-text-white);
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4);
+  box-shadow: var(--shadow-lg);
 }
 
 /* --------------------------------------------------------------------------
@@ -1588,5 +1652,16 @@ ul, ol {
     flex-direction: column;
     gap: 16px;
     text-align: center;
+  }
+
+  .direct-contact-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hours-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 24px;
   }
 }

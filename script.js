@@ -219,64 +219,10 @@ function initGalleryLightbox() {
 }
 
 /* ==========================================================================
-   6. VALIDAÇÃO DO FORMULÁRIO DE CONTATO E MODAL DEMO
+   6. ATENDIMENTO DIRETO
    ========================================================================== */
 function initContactForm() {
-  const form = document.getElementById('contactForm');
-  const demoModal = document.getElementById('demoModal');
-  const demoModalClose = document.getElementById('demoModalClose');
-
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById('formName');
-    const phone = document.getElementById('formPhone');
-    const email = document.getElementById('formEmail');
-    const service = document.getElementById('formService');
-    const message = document.getElementById('formMessage');
-
-    // Validação básica
-    let isValid = true;
-
-    [name, phone, email, service, message].forEach(field => {
-      if (!field || !field.value.trim()) {
-        isValid = false;
-        field.classList.add('invalid');
-      } else {
-        field.classList.remove('invalid');
-      }
-    });
-
-    if (!isValid) {
-      alert('Por favor, preencha todos os campos obrigatórios.');
-      return;
-    }
-
-    // Exibir Modal Demonstrativo
-    if (demoModal) {
-      demoModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      form.reset();
-    }
-  });
-
-  if (demoModalClose) {
-    demoModalClose.addEventListener('click', () => {
-      demoModal.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-  }
-
-  if (demoModal) {
-    demoModal.addEventListener('click', (e) => {
-      if (e.target === demoModal) {
-        demoModal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    });
-  }
+  // Redirecionamento direto via botões do WhatsApp e E-mail
 }
 
 /* ==========================================================================
